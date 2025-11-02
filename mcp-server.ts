@@ -8,7 +8,6 @@ import {
 } from "@modelcontextprotocol/sdk/types.js";
 import * as fs from "fs";
 
-// Search function implementation
 function searchFile(filename: string, keyword: string) {
   try {
     if (!fs.existsSync(filename)) {
@@ -49,7 +48,6 @@ function searchFile(filename: string, keyword: string) {
   }
 }
 
-// Create MCP server instance
 const server = new Server(
   {
     name: "ressl-file-search-server",
@@ -62,7 +60,6 @@ const server = new Server(
   }
 );
 
-// Register tool handlers
 server.setRequestHandler(ListToolsRequestSchema, async () => {
   return {
     tools: [
@@ -129,12 +126,10 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
   };
 });
 
-// Start the server
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   
-  // Log to stderr so it doesn't interfere with MCP protocol on stdout
   console.error("Ressl File Search MCP Server running on stdio");
 }
 
