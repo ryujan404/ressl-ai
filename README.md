@@ -20,8 +20,8 @@ This will:
 2. Open MCP Inspector in your browser locally
 3. In the MCP Inspector UI:
    - Fill in the parameters:
-     - `filename`: `sample.txt`
-     - `keyword`: `virat`
+     - `filename`: `sample.txt`(You can change the file-content according to the need.)
+     - `keyword`: `virat` (Can change the keyword accordingly)
    - Click "Run Tool"
    - View the results showing all matching lines
 
