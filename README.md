@@ -18,7 +18,8 @@ npx @modelcontextprotocol/inspector bun run mcp-server.ts
 This will:
 1. Start the MCP server
 2. Open MCP Inspector in your browser locally
-3. In the MCP Inspector UI:
+3. Enter the session token in the UI and then select the tool search_file under tools dropdown
+4. Then in MCP Inspector UI:
    - Fill in the parameters:
      - `filename`: `sample.txt`(You can change the file-content according to the need.)
      - `keyword`: `virat` (Can change the keyword accordingly)
